@@ -1,0 +1,30 @@
+@import "variables-night";
+@import "deps";
+@import "app";
+
+.custom-border-color-1{
+  background-color: black;
+  padding: 10px 5px;
+}
+
+.custom-border-color-2{
+  background-color: red;
+  padding: 10px 5px;
+}
+
+.custom-border-color-3{
+  background-color: blue;
+  padding: 10px 5px;
+}
+
+.custom-border-color-4{
+  background-color: black;
+  padding: 10px 5px;
+}
+
+.custom-border-color-5{
+  background-color: black;
+  padding: 10px 5px;
+  margin: 0 auto;
+	max-width: 900px;
+}

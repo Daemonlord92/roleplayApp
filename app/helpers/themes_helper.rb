@@ -3,8 +3,8 @@
 module ThemesHelper
   def themes
     {
-      'day' => t('themes.day'),
-      'night' => t('themes.night')
+      'Anastasia' => t('themes.Anastasia'),
+      'Axe' => t('themes.Axe')
     }
   end
 

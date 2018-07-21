@@ -44,12 +44,12 @@
   $mat-palette: $mat-deep-orange !global;
 }
 
-$brand-primary: map-get($mat-palette, 500);
-$text-color: map-get($mat-palette, 50);
-$secondary-text-color: rgba(map-get($mat-palette, 50), 0.87);
-$body-background-color: #212121;
-$background-color: #272727;
-
+$brand-primary: #441294;
+$text-color: #950000;
+$secondary-text-color: #270068;
+$body-background-color: #000000;
+$background-color: #000000;
+$base-line-color: red;
 $action-hover-color: map-get($mat-palette, A200);
 $secondary-nav-color: $text-color;
 
@@ -69,3 +69,4 @@ $thredded-onebox-favicon-properties: (
 $thredded-code-selected-line-background: #541;
 
 @import "variables";
+

@@ -1,24 +1,41 @@
-# README
+<% unless Rails.env.production? %>
+  <p>You can now:</p>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+  <ul>
+    <li>
+      <p>
+        <b><%= link_to 'Log in', new_user_session_path %></b> as
+        <code>admin@roleplayapp.com</code>
+        with password <code>123456</code>.
+      </p>
+    </li>
+    <li>
+      <p>Edit this page at <code>app/views/home/show.html.erb</code>.</p>
+    </li>
+  </ul>
 
-Things you may want to cover:
+  <hr>
+  <p>Your app uses:</p>
+  <ul>
+    <li><%= ActiveRecord::Base.connection.adapter_name %> database.</li>
+    <li>
+      <a href="http://rubyonrails.org/">Ruby on Rails</a>
+      v<%= Rails::VERSION::STRING %>.
+    </li>
+    <li>
+      <a href="https://github.com/plataformatec/devise">Devise</a>
+      v<%= require 'devise/version'; Devise::VERSION %> for authentication.
+    </li>
+    <li>
+      <a href="https://github.com/thredded/thredded">Thredded</a>
+      v<%= Thredded::VERSION %> as the forums engine.
+    </li>
+    <li>Sass for your styles.</li>
+    <li>RSpec for testing.</li>
+  </ul>
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  Created with
+  <a href="https://github.com/thredded/thredded_create_app">
+    thredded_create_app
+  </a> v0.1.24.
+<% end %>
