@@ -1,30 +1,33 @@
-<header role="banner" class="app-header custom-background-img">
-  <span class="app-nav-auth">
-    <% if current_user %>
-        <%= link_to current_user.display_name, user_path(current_user) %>
-        |
-        <%= link_to t('nav.sign_out'), main_app.destroy_user_session_path,
-                    method: :delete %>
-    <% else %>
-        <%= link_to t('nav.sign_in'), main_app.new_user_session_path %>
-    <% end %>
-  </span>
-  <a class="app-nav-logo" href="/">Anastasia and Axe's Roleplay Forum</a>
-  <div class="app-nav-theme">
-    <span class="app-nav-text"><%= t 'nav.theme' %>:</span>
-    <ul>
-      <% themes.each do |(theme_key, theme_name)| %>
-        <%= content_tag :li, class: ('app-current' if theme_key == current_theme), 'data-theme' => theme_key do -%>
-          <% if theme_key == current_theme -%>
-            <span class="app-nav-text"><%= theme_name %></span>
-          <% else -%>
-            <button type="button">
-              <span class="app-nav-text"><%= theme_name %></span>
-              <span class="app-nav-icon"><%= inline_svg 'brightness.svg' %></span>
-            </button>
-          <% end -%>
-        <% end -%>
+<header role="banner" class="app-header ">
+  <div class="custom-background-img">
+    <span class="app-nav-auth custom-pull-down-1">
+
+      <% if current_user %>
+          <%= link_to current_user.display_name, user_path(current_user) %>
+          |
+          <%= link_to t('nav.sign_out'), main_app.destroy_user_session_path,
+                      method: :delete %>
+      <% else %>
+          <%= link_to t('nav.sign_in'), main_app.new_user_session_path %>
       <% end %>
-    </ul>
-  </div>
+    </span>
+    <a class="app-nav-logo" href="/">Anastasia Roleplay Forum</a>
+    <div class="app-nav-theme custom-pull-down">
+      <span class="app-nav-text"><%= t 'nav.theme' %>:</span>
+      <ul>
+        <% themes.each do |(theme_key, theme_name)| %>
+          <%= content_tag :li, class: ('app-current' if theme_key == current_theme), 'data-theme' => theme_key do -%>
+            <% if theme_key == current_theme -%>
+              <span class="app-nav-text"><%= theme_name %></span>
+            <% else -%>
+              <button type="button">
+                <span class="app-nav-text"><%= theme_name %></span>
+                <span class="app-nav-icon"><%= inline_svg 'brightness.svg' %></span>
+              </button>
+            <% end -%>
+          <% end -%>
+        <% end %>
+      </ul>
+    </div>
+  </div> 
 </header>

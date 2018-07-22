@@ -28,3 +28,15 @@
   margin: 0 auto;
 	max-width: 900px;
 }
+
+.custom-background-img{
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  width: 100%;
+  height: 400px;
+  background: url("roleplayheader.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 10px;
+}

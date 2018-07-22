@@ -30,5 +30,26 @@
 }
 
 .custom-background-img{
-	background: url("anasimg.png") !important;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  width: 100%;
+  height: 400px;
+  background: url("anasimg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 10px;
+}
+
+.custom-pull-down{
+	color: black;
+}
+.custom-pull-down-1{
+	color: black;
+}
+.custom-pull-down-1 a {
+	color: black;
+}
+.custom-pull-down a {
+	color: black;
 }
